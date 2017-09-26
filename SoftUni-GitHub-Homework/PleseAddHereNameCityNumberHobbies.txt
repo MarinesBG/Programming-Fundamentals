@@ -34,11 +34,11 @@ Hobby : Programming , sports ;
 Info  : I like to learn new stuff and to use it in the future.
 
 
-Name  :
-Phone :
-Town  :
-Hobby :
-Info  :
+Name  : Anna Maria
+Phone : 08876 672 32
+Town  : Varna
+Hobby : Dance
+Info  : I am a pritty
 
 
 Name  :
