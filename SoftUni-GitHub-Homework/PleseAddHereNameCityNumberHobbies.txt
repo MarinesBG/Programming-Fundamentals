@@ -34,25 +34,25 @@ Hobby : Programming , sports ;
 Info  : I like to learn new stuff and to use it in the future.
 
 
-Name  : Anna Maria
-Phone : 08876 672 32
-Town  : Varna
-Hobby : Dance
-Info  : I am a pritty
+Name  : Anna Maria ; 
+Phone : 08876 672 32 ; 
+Town  : Varna ;
+Hobby : Dance ;
+Info  : I am a pritty ;
 
 
-Name  : Albena Atanasova
-Phone : 0898 89 89 89
-Town  : Bqla
-Hobby : Running
-Info  : Singing
+Name  : Albena Atanasova ; 
+Phone : 0898 89 89 89 ; 
+Town  : Bqla ;
+Hobby : Running ;
+Info  : Singing ;
 
 
-Name  : Maq Petrova
-Phone : 08763259235
-Town  : Petrich
-Hobby : Shopping
-Info  : I am crazy ! 
+Name  : Maq Petrova ;
+Phone : 0884449235 ;
+Town  : Petrich ;
+Hobby : Shopping , dance ; 
+Info  : I am crazy ;
 
 
 Name  : 
