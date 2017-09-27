@@ -8,135 +8,61 @@ namespace P03_Restaurant_Discount
     {
         static void Main()
         {
-            int people = int.Parse(Console.ReadLine());
-            string package = Console.ReadLine();
+            int numberOfGroup = int.Parse(Console.ReadLine());
+            string thePackage = Console.ReadLine();
+            var price = 0.0;
+            var discount = 0.0;
+            string hall = "";
 
-            if (people <= 50 )
+            if (numberOfGroup >= 0 && numberOfGroup <= 50)
             {
-                int smallHall = 2500;
-                double sum;
-                double percentage;
-                double totalPrice;
-                double pricePerPerson;
+                price = 2500;
+                hall = "Small Hall";
+            }
+            else if (numberOfGroup > 50 && numberOfGroup <= 100)
+            {
+                price = 5000;
+                hall = "Terrace";
+            }
+            else if (numberOfGroup > 100 && numberOfGroup <= 120)
+            {
+                price = 7500;
+                hall = "Great Hall";
+            }
 
-                switch (package)
-                {
-                    case "Normal":
-                        int normal = 500;
-                        sum = smallHall + normal;
-                        percentage = sum * 5 / 100;
-                        totalPrice = sum - percentage;
-                        pricePerPerson = totalPrice / people;
-                        Console.WriteLine("We can offer you the Small Hall");
-                        Console.WriteLine($"The price per person is {pricePerPerson:F2}$");
-                        break;
-                    case "Gold":
-                        int gold = 750;
-                        sum = smallHall + gold;
-                        percentage = sum * 10 / 100;
-                        totalPrice = sum - percentage;
-                        pricePerPerson = totalPrice / people;
-                        Console.WriteLine("We can offer you the Small Hall");
-                        Console.WriteLine($"The price per person is {pricePerPerson:F2}$");
-                        break;
-                    case "Platinum":
-                        int platinum = 1000;
-                        sum = smallHall + platinum;
-                        percentage = sum * 15 / 100;
-                        totalPrice = sum - percentage;
-                        pricePerPerson = totalPrice / people;
-                        Console.WriteLine("We can offer you the Small Hall");
-                        Console.WriteLine($"The price per person is {pricePerPerson:F2}$");
-                        break;
-                }
-               
-
+            if (thePackage == "Normal")
+            {
+                discount = 0.05;
+                price = price + 500;
+            }
+            else if (thePackage == "Gold")
+            {
+                discount = 0.10;
+                price = price + 750;
 
             }
-            else if (people > 50 && people <= 100)
+            else if (thePackage == "Platinum")
             {
-                int terrace = 5000;
-                double sum;
-                double percentage;
-                double totalPrice;
-                double pricePerPerson;
+                discount = 0.15;
+                price = price + 1000;
 
-
-                switch (package)
-                {
-                    case "Normal":
-                        int normal = 500;
-                        sum = terrace + normal;
-                        percentage = sum * 5 / 100;
-                        totalPrice = sum - percentage;
-                        pricePerPerson = totalPrice / people;
-                        Console.WriteLine("We can offer you the Terrace");
-                        Console.WriteLine($"The price per person is {pricePerPerson:F2}$");
-                        break;
-                    case "Gold":
-                        int gold = 750;
-                        sum = terrace + gold;
-                        percentage = sum * 10 / 100;
-                        totalPrice = sum - percentage;
-                        pricePerPerson = totalPrice / people;
-                        Console.WriteLine("We can offer you the Terrace");
-                        Console.WriteLine($"The price per person is {pricePerPerson:F2}$");
-                        break;
-                    case "Platinum":
-                        int platinum = 1000;
-                        sum = terrace + platinum;
-                        percentage = sum * 15 / 100;
-                        totalPrice = sum - percentage;
-                        pricePerPerson = totalPrice / people;
-                        Console.WriteLine("We can offer you the Terrace");
-                        Console.WriteLine($"The price per person is {pricePerPerson:F2}$");
-                        break;
-                }
             }
-            else if (people > 100 && people <= 120)
+
+            var sumofdiscound = price * discount;
+            var leftPrice = price - sumofdiscound;
+
+            var perPerson = leftPrice / numberOfGroup;
+
+            if (hall != "")
             {
-                int greatHall = 7500;
-                double sum;
-                double percentage;
-                double totalPrice;
-                double pricePerPerson;
-
-
-                switch (package)
-                {
-                    case "Normal":
-                        int normal = 500;
-                        sum = greatHall + normal;
-                        percentage = sum * 5 / 100 ;
-                        totalPrice = sum - percentage;
-                        pricePerPerson = totalPrice / people;
-                        Console.WriteLine("We can offer you the Great Hall");
-                        Console.WriteLine($"The price per person is {pricePerPerson:F2}$");
-                        break;
-                    case "Gold":
-                        int gold = 750;
-                        sum = greatHall + gold;
-                        percentage = sum * 10 / 100;
-                        totalPrice = sum - percentage;
-                        pricePerPerson = totalPrice / people;
-                        Console.WriteLine("We can offer you the Great Hall");
-                        Console.WriteLine($"The price per person is {pricePerPerson:F2}$");
-                        break;
-                    case "Platinum":
-                        int platinum = 1000;
-                        sum = greatHall + platinum;
-                        percentage = sum * 15 / 100;
-                        totalPrice = sum - percentage;
-                        pricePerPerson = totalPrice / people;
-                        Console.WriteLine("We can offer you the Great Hall");
-                        Console.WriteLine($"The price per person is {pricePerPerson:F2}$");
-                        break;
-                }
+                Console.WriteLine("We can offer you the {0}", hall);
+                Console.WriteLine($"The price per person is {perPerson:F2}$");
             }
             else
             {
                 Console.WriteLine("We do not have an appropriate hall.");
             }
+
         }
     }
 }
