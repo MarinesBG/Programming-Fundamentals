@@ -16,7 +16,7 @@ namespace P03_Miles_to_Kilometers
 
             var result = mile * kilometers;
 
-            Console.WriteLine($"{result:F2}");
+            Console.WriteLine(result:F2);
 
         }
     }
