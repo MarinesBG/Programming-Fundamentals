@@ -55,8 +55,8 @@ Hobby : Shopping , dance ;
 Info  : I am crazy ;
 
 
-Name  : Ivan Petrov 
-Phone : 0877823234
-Town  : Sofia
-Hobby : Freerun
-Info  : I am nurd and i Know it  !
+Name  : Ivan Petrov ;
+Phone : 0877823234 ;
+Town  : Sofia ;
+Hobby : Freerun ;
+Info  : I am nurd and i Know it ; 
