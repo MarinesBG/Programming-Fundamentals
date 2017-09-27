@@ -7,30 +7,15 @@ namespace P06_Interval_of_Numbers
     {
         static void Main(string[] args)
         {
-
             int firstNumber = int.Parse(Console.ReadLine());
             int secondNumber = int.Parse(Console.ReadLine());
 
-            if (firstNumber >= 0 &&
-                   firstNumber <= 100 &&
-                   secondNumber >= 0 && 
-                   secondNumber <= 100 &&
-                   firstNumber != secondNumber )
+            int maxNumber = Math.Max(firstNumber, secondNumber);
+            int minNumber = Math.Min(firstNumber, secondNumber);
+
+            for (int i = minNumber; i <= maxNumber; i++)
             {
-                if (firstNumber < secondNumber)
-                {
-                    for (int i = firstNumber; i <= secondNumber; i++)
-                    {
-                        Console.WriteLine(i);
-                    }  
-                }
-                else
-                {
-                    for (int i = secondNumber; i <= firstNumber; i++)
-                    {
-                        Console.WriteLine(i);
-                    }
-                }
+                Console.WriteLine(i);
             }
 
         }
