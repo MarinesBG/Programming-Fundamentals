@@ -48,11 +48,11 @@ Hobby : Running
 Info  : Singing
 
 
-Name  :
-Phone :
-Town  :
-Hobby :
-Info  :
+Name  : Maq Petrova
+Phone : 08763259235
+Town  : Petrich
+Hobby : Shopping
+Info  : I am crazy ! 
 
 
 Name  : 
