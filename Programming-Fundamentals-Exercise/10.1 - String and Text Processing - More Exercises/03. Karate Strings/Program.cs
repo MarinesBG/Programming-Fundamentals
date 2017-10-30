@@ -11,32 +11,50 @@ namespace _03.Karate_Strings
         static void Main(string[] args)
         {
 
-            List<string> input = Console.ReadLine()
+            string inp = Console.ReadLine();
+
+            List<string> input = inp
                 .Split(new char[] { '>' }, StringSplitOptions.RemoveEmptyEntries)
                 .ToList();
 
-            int length = 0;
             int currentLetght = 0;
-            for (int i = 1; i < input.Count; i++)
+            int start = 0;
+
+            if (inp[0] == '>')
+            {
+                start = 0;
+            }
+            else
+            {
+                start = 1;
+            }
+
+            for (int i = start; i < input.Count; i++)
             {
                 char first = input[i].First();
-                int strength = Convert.ToInt32(first - 48);
+                int strength = int.Parse(first.ToString());
 
-                length = input[i].Length;
+                int length = input[i].Length;
 
                 input[i] = new String(input[i].Skip(strength + currentLetght).ToArray());
 
-                currentLetght = 0;
-
-                if (strength > length)
+                if (strength + currentLetght > length)
                 {
-                    currentLetght = strength - length;
-                    
+                    currentLetght = strength + currentLetght - length;
                 }
-                
+
             }
 
-            Console.WriteLine(String.Join(">", input));
+            if (start == 0)
+            {
+                Console.WriteLine('>' + String.Join(">", input));
+            }
+            else
+            {
+                Console.WriteLine(String.Join(">", input));
+            }
+
+            
         }
     }
 }
